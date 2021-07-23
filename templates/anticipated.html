@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+
+<html>
+  
+  <head>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/trending.css') }}">
+<!-- 		<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/nav.css') }}"> -->
+     
+    <title>Easy Games</title>
+  </head>
+  <body>
+		 <div class="topnav">
+			<a class="active" href="/">Home</a>
+			 <a href="/platform">Gaming Platforms</a>
+			<a href="/trending">Trending Games</a>
+			<a href="/anticipated">Upcoming Games</a>
+			<a href="/about">About Us</a>
+		</div>
+    
+    <div class = "header">
+
+      <p><a><ul>
+        Anticipated Games!
+        </ul></a></p>
+    </div>
+    
+    
+			
+<!--    -->
+      
+			<div class = "row" id="diplay">
+
+              {% for names,images in both %}
+
+                <div class = "column">
+                   <a id="image_name" style="color:gold; font-size:30px;font-family:'Courier New"> {{ names}} </a>
+                  <p id="image_card"> <img src={{images}} width="1100" height="550"></p> <br>
+                </div>
+           
+            {% endfor %} 
+      
+            
+			</div>
+      
+  </body>
+</html>

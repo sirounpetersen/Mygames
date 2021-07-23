@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+
+<html>
+  
+  <head>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/trending.css') }}">
+<!-- 		<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/nav.css') }}"> -->
+     
+    <title>Easy Games</title>
+  </head>
+  <body>
+		 <div class="topnav">
+			<a class="active" href="/">Home</a>
+			 <a href="/platform">Gaming Platforms</a>
+			<a href="/trending">Trending Games</a>
+			<a href="/anticipated">Upcoming Games</a>
+			<a href="/about">About Us</a>
+		</div>
+    
+    <div class = "header">
+
+      <p><a><ul>
+        Platform Based Games!
+        </ul></a></p>
+    </div>
+			
+<!--    -->
+      <style>
+			div {text-align: center;}
+			</style>
+			<div class = "display" style="color:gold; font-size:25px;font-family:'Courier New'">
+						<h2 style="text-decoration: underline;"> {{console}} </h2>
+              {% for game in games %}
+           			<p> {{game}}</p>
+            	{% endfor %} 
+         
+			</div>
+      
+  </body>
+</html>
